@@ -1,5 +1,34 @@
-@use 'variables' as var;
+@use "variables" as var;
 
-:root{
-  
+:root {
+  --default-font       : #{var.$default-font};
+  --font-20            : #{var.$font-20};
+  --font-28            : #{var.$font-28};
+  --font-32            : #{var.$font-32};
+  --font-40            : #{var.$font-40};
+  --color-White        : #{var.$color-White};
+  --color-Stone-100    : #{var.$color-Stone-100};
+  --color-Stone-150    : #{var.$color-Stone-150};
+  --color-Stone-600    : #{var.$color-Stone-600};
+  --color-Stone-900    : #{var.$color-Stone-900};
+  --color-Brown-800    : #{var.$color-Brown-800};
+  --color-Rose-800     : #{var.$color-Rose-800};
+  --color-Rose-50      : #{var.$color-Rose-50};
+  --spacing-1600       : #{var.$spacing-1600};
+  --spacing-600        : #{var.$spacing-600};
+  --spacing-500        : #{var.$spacing-500};
+  --spacing-400        : #{var.$spacing-400};
+  --spacing-300        : #{var.$spacing-300};
+  --spacing-200        : #{var.$spacing-200};
+  --spacing-150        : #{var.$spacing-150};
+  --spacing-100        : #{var.$spacing-100};
+  --line-height        : #{var.$line-height};
+  --line-height-m      : #{var.$line-height-m};
+  --border-radius-s    : #{var.$border-radius-s};
+  --border-radius-m    : #{var.$border-radius-m};
+  --border-radius-l    : #{var.$border-radius-l};
+  --clamp-spacing      : clamp(var(--spacing-400), 2vw, var(--spacing-1600));
+  --clamp-spacing-y    : clamp(0rem, 2vw, var(--spacing-1600));
+  --clamp-spacing-x    : clamp(0rem, 2vw, var(--spacing-500));
+  --clamp-main-spacing : clamp(0rem, 2vw, var(--spacing-500));
   }

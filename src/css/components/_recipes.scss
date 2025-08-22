@@ -1,0 +1,7 @@
+.recipe-content {
+  display         : flex;
+  flex-direction  : column;
+  justify-content : start;
+  align-items     : stretch;
+  gap             : var(--spacing-400);
+  }

@@ -1,3 +1,36 @@
+:root {
+  --default-font: 1rem;
+  --font-20: 1.25rem;
+  --font-28: 1.75rem;
+  --font-32: 2rem;
+  --font-40: 2.5rem;
+  --color-White: hsl(0, 0%, 100%);
+  --color-Stone-100: hsl(30, 54%, 90%);
+  --color-Stone-150: hsl(30, 18%, 87%);
+  --color-Stone-600: hsl(30, 10%, 34%);
+  --color-Stone-900: hsl(24, 5%, 18%);
+  --color-Brown-800: hsl(14, 45%, 36%);
+  --color-Rose-800: hsl(332, 51%, 32%);
+  --color-Rose-50: hsl(330, 100%, 98%);
+  --spacing-1600: 8rem;
+  --spacing-600: 3rem;
+  --spacing-500: 2.5rem;
+  --spacing-400: 2rem;
+  --spacing-300: 1.5rem;
+  --spacing-200: 1rem;
+  --spacing-150: 0.75rem;
+  --spacing-100: 0.5rem;
+  --line-height: 1;
+  --line-height-m: 1.5;
+  --border-radius-s: 12px;
+  --border-radius-m: 16px;
+  --border-radius-l: 24px;
+  --clamp-spacing: clamp(var(--spacing-400), 2vw, var(--spacing-1600));
+  --clamp-spacing-y: clamp(0rem, 2vw, var(--spacing-1600));
+  --clamp-spacing-x: clamp(0rem, 2vw, var(--spacing-500));
+  --clamp-main-spacing: clamp(0rem, 2vw, var(--spacing-500));
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15;
@@ -156,6 +189,120 @@ template {
 
 [hidden] {
   display: none;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--default-font);
+  line-height: var(--line-height-m);
+  color: var(--color-Stone-600);
+  background-color: var(--color-Stone-100);
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: var(--clamp-spacing-y) var(--clamp-spacing-x);
+  gap: 8px;
+  margin: 0 auto;
+}
+
+p {
+  font-size: var(--default-font);
+  line-height: var(--line-height-m);
+  color: var(--color-Stone-600);
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h1 {
+  margin-block-start: 0.063rem;
+  color: var(--color-Stone-900);
+  font-size: var(--font-40);
+  line-height: var(--line-height);
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h2 {
+  margin-block-start: 0.063rem;
+  color: var(--color-Brown-800);
+  font-size: var(--font-28);
+  line-height: var(--line-height);
+  font-family: "Young Serif", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+h3 {
+  font-size: var(--font-20);
+}
+
+h3, h4, h5, h6 {
+  margin-block-start: 0.063rem;
+  line-height: var(--line-height);
+  color: var(--color-Rose-800);
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--border-radius-s);
+}
+
+main {
+  background-color: var(--color-White);
+  padding: var(--clamp-main-spacing);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  max-width: 46rem;
+  gap: var(--spacing-500);
+  border-radius: var(--border-radius-l);
+}
+
+ul, ol {
+  color: var(--color-Stone-600);
+}
+
+ul ::marker,
+ol ::marker {
+  color: var(--color-Brown-800);
+  font-weight: bold;
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-Stone-150);
+  border: none;
+}
+
+.recipe-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  gap: var(--spacing-400);
 }
 
 /*# sourceMappingURL=style.min.css.map */
