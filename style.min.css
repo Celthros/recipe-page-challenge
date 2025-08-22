@@ -327,6 +327,17 @@ dd {
   margin: 0; /* Remove default margin */
 }
 
+dl dt,
+dl dd {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+dl dd:last-of-type {
+  border-bottom: none;
+}
+
 .recipe {
   display: flex;
   flex-direction: column;
