@@ -1,7 +1,36 @@
-.recipe-content {
+@use "../abstract/mixins";
+
+.recipe {
   display         : flex;
   flex-direction  : column;
-  justify-content : start;
+  justify-content : flex-start;
   align-items     : stretch;
   gap             : var(--spacing-400);
+  
+  &-prep-time {
+	background-color : var(--color-Rose-50);
+	padding          : var(--spacing-300);
+	display          : flex;
+	flex-direction   : column;
+	gap              : 16px;
+	
+	& ul, & ol {
+	  color                : var(--color-Stone-600);
+	  }
+	
+	& ul ::marker,
+	& ol ::marker {
+	  color       : var(--color-Rose-800);
+	  font-weight : bold;
+	  }
+	}
+  
+  &-prep-time-heading {
+	margin-block-end : 0.063rem;
+	font-size   : var(--font-20);
+	line-height : var(--line-height);
+	color       : var(--color-Rose-800);
+	@include mixins.outfit-font(600);
+	}
+	
   }

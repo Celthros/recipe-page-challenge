@@ -272,7 +272,7 @@ main {
   padding: var(--clamp-main-spacing);
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   max-width: 46rem;
@@ -282,6 +282,10 @@ main {
 
 ul, ol {
   color: var(--color-Stone-600);
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 25px;
+  padding-inline-end: 25px;
 }
 
 ul ::marker,
@@ -297,12 +301,36 @@ hr {
   border: none;
 }
 
-.recipe-content {
+.recipe {
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: stretch;
   gap: var(--spacing-400);
+}
+.recipe-prep-time {
+  background-color: var(--color-Rose-50);
+  padding: var(--spacing-300);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.recipe-prep-time ul, .recipe-prep-time ol {
+  color: var(--color-Stone-600);
+}
+.recipe-prep-time ul ::marker, .recipe-prep-time ol ::marker {
+  color: var(--color-Rose-800);
+  font-weight: bold;
+}
+.recipe-prep-time-heading {
+  margin-block-end: 0.063rem;
+  font-size: var(--font-20);
+  line-height: var(--line-height);
+  color: var(--color-Rose-800);
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
 
 /*# sourceMappingURL=style.min.css.map */

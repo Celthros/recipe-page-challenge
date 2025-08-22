@@ -69,7 +69,7 @@ main {
   padding          : var(--clamp-main-spacing);
   display          : flex;
   flex-direction   : column;
-  justify-content  : start;
+  justify-content  : flex-start;
   align-items      : center;
   width            : 100%;
   max-width        : 46rem;
@@ -79,6 +79,10 @@ main {
 
 ul, ol {
   color : var(--color-Stone-600);
+  margin-block-start   : 0;
+  margin-block-end     : 0;
+  padding-inline-start : 25px;
+  padding-inline-end : 25px;
   }
 
 ul ::marker,
