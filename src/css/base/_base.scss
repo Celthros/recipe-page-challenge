@@ -15,7 +15,7 @@ body {
   justify-content  : center;
   align-items      : center;
   padding          : var(--clamp-spacing-y) var(--clamp-spacing-x);
-  gap              : 8px;
+  gap              : var(--spacing-100);;
   margin           : 0 auto;
   }
 
@@ -78,11 +78,11 @@ main {
   }
 
 ul, ol {
-  color : var(--color-Stone-600);
+  color                : var(--color-Stone-600);
   margin-block-start   : 0;
   margin-block-end     : 0;
-  padding-inline-start : 25px;
-  padding-inline-end : 25px;
+  padding-inline-start : var(--spacing-300);
+  padding-inline-end   : var(--spacing-300);
   }
 
 ul ::marker,
