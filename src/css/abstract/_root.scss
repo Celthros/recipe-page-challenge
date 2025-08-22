@@ -1,6 +1,7 @@
 @use "variables" as var;
 
 :root {
+  --font-4             : 0.25rem;
   --default-font       : #{var.$default-font};
   --font-20            : #{var.$font-20};
   --font-28            : #{var.$font-28};

@@ -27,19 +27,21 @@ p {
 	
   }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   margin-block-start : 0.063rem;
-  color              : var(--color-Stone-900);
-  font-size          : var(--font-40);
-  line-height        : var(--line-height);
+  }
+
+h1 {
+  color       : var(--color-Stone-900);
+  font-size   : var(--font-40);
+  line-height : var(--line-height);
   @include mixins.young-serif-font();
   }
 
 h2 {
-  margin-block-start : 0.063rem;
-  color              : var(--color-Brown-800);
-  font-size          : var(--font-28);
-  line-height        : var(--line-height);
+  color       : var(--color-Brown-800);
+  font-size   : var(--font-28);
+  line-height : var(--line-height);
   @include mixins.young-serif-font();
   }
 
@@ -48,9 +50,8 @@ h3 {
   }
 
 h3, h4, h5, h6 {
-  margin-block-start : 0.063rem;
-  line-height        : var(--line-height);
-  color              : var(--color-Rose-800);
+  line-height : var(--line-height);
+  color       : var(--color-Rose-800);
   @include mixins.outfit-font(600);
   }
 
@@ -86,12 +87,16 @@ ul, ol {
   }
 
 ul li, ol li {
-  margin-bottom: var(--spacing-100);
-  padding-left: var(--spacing-150);
+  margin-bottom : var(--spacing-100);
+  padding-left  : var(--spacing-150);
   
   &:last-child {
-    margin-bottom: 0;
-    }
+	margin-bottom : 0;
+	}
+  }
+
+ul ::marker {
+  font-size : 12px;
   }
 
 ul ::marker,
@@ -105,5 +110,21 @@ hr {
   height           : 1px;
   background-color : var(--color-Stone-150);
   border           : none;
+  }
+
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1.5rem; /* row gap, column gap */
+  align-items: baseline;
+  }
+
+dt {
+  
+  }
+
+dd {
+  font-weight: bold;
+  margin: 0; /* Remove default margin */
   }
   

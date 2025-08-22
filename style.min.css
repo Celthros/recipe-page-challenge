@@ -1,4 +1,5 @@
 :root {
+  --font-4: 0.25rem;
   --default-font: 1rem;
   --font-20: 1.25rem;
   --font-28: 1.75rem;
@@ -223,8 +224,11 @@ p {
   font-style: normal;
 }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   margin-block-start: 0.063rem;
+}
+
+h1 {
   color: var(--color-Stone-900);
   font-size: var(--font-40);
   line-height: var(--line-height);
@@ -234,7 +238,6 @@ h1 {
 }
 
 h2 {
-  margin-block-start: 0.063rem;
   color: var(--color-Brown-800);
   font-size: var(--font-28);
   line-height: var(--line-height);
@@ -248,7 +251,6 @@ h3 {
 }
 
 h3, h4, h5, h6 {
-  margin-block-start: 0.063rem;
   line-height: var(--line-height);
   color: var(--color-Rose-800);
   font-family: "Outfit", sans-serif;
@@ -296,6 +298,10 @@ ul li:last-child, ol li:last-child {
   margin-bottom: 0;
 }
 
+ul ::marker {
+  font-size: 12px;
+}
+
 ul ::marker,
 ol ::marker {
   color: var(--color-Brown-800);
@@ -307,6 +313,18 @@ hr {
   height: 1px;
   background-color: var(--color-Stone-150);
   border: none;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1.5rem; /* row gap, column gap */
+  align-items: baseline;
+}
+
+dd {
+  font-weight: bold;
+  margin: 0; /* Remove default margin */
 }
 
 .recipe {
@@ -322,6 +340,7 @@ hr {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-200);
+  border-radius: var(--border-radius-s);
 }
 .recipe-prep-time ul, .recipe-prep-time ol {
   color: var(--color-Stone-600);
