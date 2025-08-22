@@ -85,6 +85,15 @@ ul, ol {
   padding-inline-end   : var(--spacing-300);
   }
 
+ul li, ol li {
+  margin-bottom: var(--spacing-100);
+  padding-left: var(--spacing-150);
+  
+  &:last-child {
+    margin-bottom: 0;
+    }
+  }
+
 ul ::marker,
 ol ::marker {
   color       : var(--color-Brown-800);
