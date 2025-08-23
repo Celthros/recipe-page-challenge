@@ -112,7 +112,7 @@ ul li, ol li {
   }
 
 ul ::marker {
-  font-size : 12px;
+  font-size : var(--font-4);
   }
 
 ul ::marker,
