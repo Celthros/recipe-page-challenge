@@ -6,6 +6,11 @@
   justify-content : flex-start;
   align-items     : stretch;
   gap             : var(--spacing-400);
+  padding         : 0 var(--spacing-400) var(--spacing-500);
+  
+  @media (min-width : 23.75em) {
+	padding : 0;
+	}
   
   &-prep-time {
 	background-color : var(--color-Rose-50);

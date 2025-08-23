@@ -14,10 +14,17 @@ body {
   flex-direction   : column;
   justify-content  : center;
   align-items      : center;
-  padding          : var(--clamp-spacing-y) var(--clamp-spacing-x);
+  padding          : 0;
   gap              : var(--spacing-100);
   margin           : 0 auto;
+  
+  @media (min-width : 23.625em) {
+	& {
+	  padding : var(--clamp-spacing-y) var(--clamp-spacing-x);
+	  }
+	}
   }
+
 
 p {
   font-size   : var(--default-font);
@@ -33,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   color       : var(--color-Stone-900);
-  font-size   : var(--font-40);
+  font-size   : var(--clamp-h1-size);
   line-height : var(--line-height);
   @include mixins.young-serif-font();
   }
@@ -62,12 +69,16 @@ figure {
 img {
   width         : 100%;
   height        : auto;
-  border-radius : var(--border-radius-s);
+  border-radius : 0;
+  
+  @media (min-width : 23.75em) {
+	border-radius : var(--border-radius-s);
+	}
   }
 
 main {
   background-color : var(--color-White);
-  padding          : var(--clamp-main-spacing);
+  padding          : 0;
   display          : flex;
   flex-direction   : column;
   justify-content  : flex-start;
@@ -75,7 +86,12 @@ main {
   width            : 100%;
   max-width        : 46rem;
   gap              : var(--spacing-500);
-  border-radius    : var(--border-radius-l);
+  border-radius    : 0;
+  
+  @media (min-width : 23.75em) {
+	border-radius : var(--border-radius-l);
+	padding       : var(--clamp-main-spacing);
+	}
   }
 
 ul, ol {
