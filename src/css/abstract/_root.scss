@@ -31,7 +31,7 @@
   --border-radius-m    : #{var.$border-radius-m};
   --border-radius-l    : #{var.$border-radius-l};
   --clamp-spacing      : clamp(var(--spacing-400), 2vw, var(--spacing-1600));
-  --clamp-spacing-y    : clamp(0rem, 2vw, var(--spacing-1600));
+  --clamp-spacing-y    : clamp(var(--spacing-1600), 2vw, var(--spacing-1600));
   --clamp-spacing-x    : clamp(0rem, 2vw, var(--spacing-500));
   --clamp-main-spacing : clamp(0rem, 2vw, var(--spacing-500));
   --clamp-h1-size      : clamp(var(--font-36), 1vw, var(--font-40));
