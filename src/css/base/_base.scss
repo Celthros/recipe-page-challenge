@@ -19,9 +19,8 @@ body {
   margin           : 0 auto;
   
   @media (min-width : 23.625em) {
-	& {
-	  padding : var(--clamp-spacing-y) var(--clamp-spacing-x);
-	  }
+	padding : var(--clamp-spacing-y) var(--clamp-spacing-x);
+	
 	}
   }
 
