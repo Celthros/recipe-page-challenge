@@ -1,10 +1,13 @@
 @use "variables" as var;
 
 :root {
+  --font-4             : 0.25rem;
+  --font-12            : #{var.$font-12};
   --default-font       : #{var.$default-font};
   --font-20            : #{var.$font-20};
   --font-28            : #{var.$font-28};
   --font-32            : #{var.$font-32};
+  --font-36            : #{var.$font-36};
   --font-40            : #{var.$font-40};
   --color-White        : #{var.$color-White};
   --color-Stone-100    : #{var.$color-Stone-100};
@@ -31,4 +34,5 @@
   --clamp-spacing-y    : clamp(0rem, 2vw, var(--spacing-1600));
   --clamp-spacing-x    : clamp(0rem, 2vw, var(--spacing-500));
   --clamp-main-spacing : clamp(0rem, 2vw, var(--spacing-500));
+  --clamp-h1-size      : clamp(var(--font-36), 1vw, var(--font-40));
   }

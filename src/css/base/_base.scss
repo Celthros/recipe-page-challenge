@@ -14,10 +14,16 @@ body {
   flex-direction   : column;
   justify-content  : center;
   align-items      : center;
-  padding          : var(--clamp-spacing-y) var(--clamp-spacing-x);
+  padding          : 0;
   gap              : var(--spacing-100);
   margin           : 0 auto;
+  
+  @media (min-width : 23.625em) {
+	padding : var(--clamp-spacing-y) var(--clamp-spacing-x);
+	
+	}
   }
+
 
 p {
   font-size   : var(--default-font);
@@ -27,19 +33,21 @@ p {
 	
   }
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
   margin-block-start : 0.063rem;
-  color              : var(--color-Stone-900);
-  font-size          : var(--font-40);
-  line-height        : var(--line-height);
+  }
+
+h1 {
+  color       : var(--color-Stone-900);
+  font-size   : var(--clamp-h1-size);
+  line-height : var(--line-height);
   @include mixins.young-serif-font();
   }
 
 h2 {
-  margin-block-start : 0.063rem;
-  color              : var(--color-Brown-800);
-  font-size          : var(--font-28);
-  line-height        : var(--line-height);
+  color       : var(--color-Brown-800);
+  font-size   : var(--font-28);
+  line-height : var(--line-height);
   @include mixins.young-serif-font();
   }
 
@@ -48,9 +56,8 @@ h3 {
   }
 
 h3, h4, h5, h6 {
-  margin-block-start : 0.063rem;
-  line-height        : var(--line-height);
-  color              : var(--color-Rose-800);
+  line-height : var(--line-height);
+  color       : var(--color-Rose-800);
   @include mixins.outfit-font(600);
   }
 
@@ -61,12 +68,16 @@ figure {
 img {
   width         : 100%;
   height        : auto;
-  border-radius : var(--border-radius-s);
+  border-radius : 0;
+  
+  @media (min-width : 23.75em) {
+	border-radius : var(--border-radius-s);
+	}
   }
 
 main {
   background-color : var(--color-White);
-  padding          : var(--clamp-main-spacing);
+  padding          : 0;
   display          : flex;
   flex-direction   : column;
   justify-content  : flex-start;
@@ -74,7 +85,12 @@ main {
   width            : 100%;
   max-width        : 46rem;
   gap              : var(--spacing-500);
-  border-radius    : var(--border-radius-l);
+  border-radius    : 0;
+  
+  @media (min-width : 23.75em) {
+	border-radius : var(--border-radius-l);
+	padding       : var(--clamp-main-spacing);
+	}
   }
 
 ul, ol {
@@ -83,6 +99,19 @@ ul, ol {
   margin-block-end     : 0;
   padding-inline-start : var(--spacing-300);
   padding-inline-end   : var(--spacing-300);
+  }
+
+ul li, ol li {
+  margin-bottom : var(--spacing-100);
+  padding-left  : var(--spacing-150);
+  
+  &:last-child {
+	margin-bottom : 0;
+	}
+  }
+
+ul ::marker {
+  font-size : var(--font-12);
   }
 
 ul ::marker,
@@ -97,4 +126,37 @@ hr {
   background-color : var(--color-Stone-150);
   border           : none;
   }
+
+.responsive-table-container {
+  width      : 100%;
+  overflow-x : auto;
+  }
+
+table {
+  min-width       : 100%;
+  border-collapse : collapse;
+  }
+
+tr {
+  border-bottom : 1px solid var(--color-Stone-150);
   
+  &:last-of-type {
+	border-bottom : none;
+	}
+  }
+
+th {
+  padding     : 0.75rem 2rem;
+  font-weight : 400;
+  }
+
+td {
+  padding     : 0.75rem 2.5rem;
+  font-weight : bold;
+  color       : var(--color-Brown-800);
+  }
+
+th, td {
+  text-align  : left;
+  white-space : nowrap;
+  }
