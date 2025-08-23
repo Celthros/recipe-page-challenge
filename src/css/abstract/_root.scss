@@ -2,6 +2,7 @@
 
 :root {
   --font-4             : 0.25rem;
+  --font-12            : #{var.$font-12};
   --default-font       : #{var.$default-font};
   --font-20            : #{var.$font-20};
   --font-28            : #{var.$font-28};
